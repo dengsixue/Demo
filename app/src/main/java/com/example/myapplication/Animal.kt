@@ -7,4 +7,4 @@ data class Animal @JvmOverloads constructor (var i:Int=0,var str:String,var cont
 //    constructor(i:Int,str:String) : this() {
 //        Log.v("demo", "第一个类")
 //    }
-    }
+}
