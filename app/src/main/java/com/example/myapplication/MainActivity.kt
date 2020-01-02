@@ -29,16 +29,23 @@ class MainActivity : AppCompatActivity() {
         text1.text = "1111111111111"
 
         button2.setOnClickListener {
+            /**anko库提供了intentFor方法用户简单生成intent对象*/
+//            val intent = intentFor<Main2Activity>()
+
+            /**anko  activity跳转写法*/
+            startActivity<Main2Activity>()
+            //弹出对话框anko写法，items表示单选形式的对话框
 //            alert {
 //                title = "asdf"
 //                items(arr) { dialog, item, index -> toast(item.toString())}
 //                positiveButton("取消") {}
 //
 //            }.show()
-            selector("yige",arr){dialogInterface, i ->
-
-            }
-
+            //弹出对话框也可以这样写
+//            selector("yige",arr){dialogInterface, i ->
+//                toast(i.toString())
+//            }
+                /**kotlin常规对话框写法*/
 //            AlertDialog.Builder(this)
 //                .setItems(arr){}
 //                .setTitle("asdf")
@@ -46,10 +53,11 @@ class MainActivity : AppCompatActivity() {
 //        }
         }
     }
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
-            if (data != null) {
-                text1.text = data!!.extras.getString("name")
-            }
-        }
+    /**从下一个页面返回数据时的回调方法*/
+//        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//            super.onActivityResult(requestCode, resultCode, data)
+//            if (data != null) {
+//                text1.text = data!!.extras.getString("name")
+//            }
+//        }
     }

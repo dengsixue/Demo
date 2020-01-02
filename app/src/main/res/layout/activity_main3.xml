@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
+    tools:context=".MainActivity">
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:navigationIcon="@mipmap/naviga"
+        android:id="@+id/toolBar"
+        android:titleTextAppearance="@style/Toolbar.TitleText"
+        android:title="App"
+        android:titleMarginStart="10dp"
+        android:background="@color/colorAccent"
+        >
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/share"
+        app:fabSize="normal"
+        app:fabCustomSize="70dp"
+        app:layout_anchor="@id/line1"
+        app:layout_anchorGravity="bottom|right"
+        app:maxImageSize="30dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
